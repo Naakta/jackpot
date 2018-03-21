@@ -12,13 +12,13 @@ import UIKit
 class Ticket {
     var numbers = Set<Int>()
     var myColor = UIColor.clear
-    var matchingNumbers = 0
     var winnings: Int?
     var isWinner = false
     var description = ""
     
+    // MARK:-
     init() {
-        let maxRange: UInt32 = 15
+        let maxRange: UInt32 = 53
         numbers.insert(Int(arc4random_uniform(maxRange)+1))
         repeat {
             let newPick = Int(arc4random_uniform(maxRange)+1)
@@ -42,8 +42,7 @@ class Ticket {
                 count += 1
             }
         }
-        print(count)
-        ticket.matchingNumbers = count
+        
         if count > 2 {
             ticket.myColor = UIColor(red: 192/255, green: 255/255, blue: 158/255, alpha: 1)
             ticket.isWinner = true
