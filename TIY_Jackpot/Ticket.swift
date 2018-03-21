@@ -35,29 +35,28 @@ class Ticket {
         }
     }
     
-    func compareForWinnings(secondTicket: Ticket) {
+    func compareForWinnings(ticket: Ticket) {
         var count = 0
-        for num in secondTicket.numbers {
+        for num in ticket.numbers {
             if numbers.contains(num) {
                 count += 1
             }
         }
         print(count)
-        secondTicket.matchingNumbers = count
+        ticket.matchingNumbers = count
         if count > 2 {
-            secondTicket.myColor = UIColor(red: 192.0, green: 255.0, blue: 158.0, alpha: 1)
-//            secondTicket.myColor = UIColor.green
-            secondTicket.isWinner = true
+            ticket.myColor = UIColor(red: 192/255, green: 255/255, blue: 158/255, alpha: 1)
+            ticket.isWinner = true
         }
 
         if count == 3 {
-            secondTicket.winnings = 1
+            ticket.winnings = 1
         } else if count == 4 {
-            secondTicket.winnings = 5
+            ticket.winnings = 5
         } else if count == 5 {
-            secondTicket.winnings = 20
+            ticket.winnings = 20
         } else if count == 6 {
-            secondTicket.winnings = 100
+            ticket.winnings = 100
         }
     }
 }

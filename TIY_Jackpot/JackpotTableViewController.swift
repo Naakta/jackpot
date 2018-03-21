@@ -47,16 +47,16 @@ class JackpotTableViewController: UITableViewController {
     
     // MARK:- TODO
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // needs to compare ticket to winning ticket and gather the correct info
-        // winning ticket will need to be optional once i design the user input of winning ticket numbers
-        // compare will set the different information that VC needs to display...pull accordingly
-       
         if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TicketCell", for: indexPath)
-            _winningTicket.compareForWinnings(secondTicket: _tickets[indexPath.row])
-            configureLabelText(cell, withNumbersFrom: _tickets[indexPath.row])
-            let cellColor = _tickets[indexPath.row].myColor
-            cell.backgroundColor = cellColor
+            let ticket = _tickets[indexPath.row]
+            _winningTicket.compareForWinnings(ticket: ticket)
+            configureLabelText(cell, withNumbersFrom: ticket)
+            if ticket.isWinner {
+                let label = cell.viewWithTag(1002) as! UILabel
+                label.text = "$\(ticket.winnings!)"
+            }
+            cell.backgroundColor = _tickets[indexPath.row].myColor
             return cell
         }
         
@@ -68,9 +68,6 @@ class JackpotTableViewController: UITableViewController {
     func configureLabelText(_ cell: UITableViewCell, withNumbersFrom ticket: Ticket, frontText: String = "") {
         let label = cell.viewWithTag(1001) as! UILabel
         label.text = frontText + ticket.description
-        if let moneyWon = ticket.winnings {
-            label.text = String(moneyWon)
-        }
     }
 
 }
