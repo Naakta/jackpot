@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5720F9206141E8008B27AD /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5720F8206141E8008B27AD /* Ticket.swift */; };
 		3F7272A72060A95300AC97B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7272A62060A95300AC97B9 /* AppDelegate.swift */; };
-		3F7272A92060A95300AC97B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7272A82060A95300AC97B9 /* ViewController.swift */; };
 		3F7272AC2060A95300AC97B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7272AA2060A95300AC97B9 /* Main.storyboard */; };
 		3F7272AE2060A95300AC97B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7272AD2060A95300AC97B9 /* Assets.xcassets */; };
 		3F7272B12060A95300AC97B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7272AF2060A95300AC97B9 /* LaunchScreen.storyboard */; };
+		3F7272B92060A99C00AC97B9 /* JackpotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7272B82060A99C00AC97B9 /* JackpotTableViewController.swift */; };
+		3FA4E83520617D2600886F1F /* WinningTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4E83420617D2600886F1F /* WinningTicketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F5720F8206141E8008B27AD /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		3F7272A32060A95300AC97B9 /* TIY_Jackpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TIY_Jackpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7272A62060A95300AC97B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F7272A82060A95300AC97B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F7272AB2060A95300AC97B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F7272AD2060A95300AC97B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F7272B02060A95300AC97B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F7272B22060A95300AC97B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F7272B82060A99C00AC97B9 /* JackpotTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackpotTableViewController.swift; sourceTree = "<group>"; };
+		3FA4E83420617D2600886F1F /* WinningTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningTicketViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +58,13 @@
 		3F7272A52060A95300AC97B9 /* TIY_Jackpot */ = {
 			isa = PBXGroup;
 			children = (
-				3F7272A62060A95300AC97B9 /* AppDelegate.swift */,
-				3F7272A82060A95300AC97B9 /* ViewController.swift */,
+				3F7272B82060A99C00AC97B9 /* JackpotTableViewController.swift */,
+				3FA4E83420617D2600886F1F /* WinningTicketViewController.swift */,
+				3F5720F8206141E8008B27AD /* Ticket.swift */,
 				3F7272AA2060A95300AC97B9 /* Main.storyboard */,
 				3F7272AD2060A95300AC97B9 /* Assets.xcassets */,
 				3F7272AF2060A95300AC97B9 /* LaunchScreen.storyboard */,
+				3F7272A62060A95300AC97B9 /* AppDelegate.swift */,
 				3F7272B22060A95300AC97B9 /* Info.plist */,
 			);
 			path = TIY_Jackpot;
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F7272A92060A95300AC97B9 /* ViewController.swift in Sources */,
+				3F7272B92060A99C00AC97B9 /* JackpotTableViewController.swift in Sources */,
+				3F5720F9206141E8008B27AD /* Ticket.swift in Sources */,
 				3F7272A72060A95300AC97B9 /* AppDelegate.swift in Sources */,
+				3FA4E83520617D2600886F1F /* WinningTicketViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

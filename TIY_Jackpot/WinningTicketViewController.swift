@@ -1,25 +1,23 @@
 //
-//  ViewController.swift
+//  WinningTicketViewController.swift
 //  TIY_Jackpot
 //
-//  Created by Doug Wagner on 3/19/18.
+//  Created by Doug Wagner on 3/20/18.
 //  Copyright © 2018 Doug Wagner. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class WinningTicketViewController: UIViewController {
+    
+    var numberArray = [0,0,0,0,0,0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
-
