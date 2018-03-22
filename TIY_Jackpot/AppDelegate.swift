@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  TIY_Jackpot
+//  Jackpot
 //
 //  Created by Doug Wagner on 3/19/18.
 //  Copyright © 2018 Doug Wagner. All rights reserved.

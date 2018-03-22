@@ -1,6 +1,6 @@
 //
 //  JackpotTableViewController.swift
-//  TIY_Jackpot
+//  Jackpot
 //
 //  Created by Doug Wagner on 3/19/18.
 //  Copyright © 2018 Doug Wagner. All rights reserved.
@@ -8,23 +8,35 @@
 
 import UIKit
 
-class JackpotTableViewController: UITableViewController {
+class JackpotTableViewController: UITableViewController, winningTicketDelegate {
     var _tickets = [Ticket]()
-    var _winningTicket = Ticket()
+    var _winningTicket: Ticket?
     
     @IBAction func addTicket() {
         _tickets.append(Ticket())
         tableView.reloadData()
     }
     
+    func doneButtonPressed(winningTicket ticket: Ticket) {
+        _winningTicket = ticket
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
+        navigationController?.navigationBar.prefersLargeTitles = true
         title = "My Tickets"
         super.viewDidLoad()
         
         // Debugging/Teting
-        for _ in 0..<100 {
-            _tickets.append(Ticket())
-        }
+//        for _ in 0..<100 {
+//            _tickets.append(Ticket())
+//        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! WinningTicketViewController
+        controller.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,8 +61,10 @@ class JackpotTableViewController: UITableViewController {
         if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TicketCell", for: indexPath)
             let ticket = _tickets[indexPath.row]
-            _winningTicket.compareForWinnings(ticket: ticket)
-            configureLabelText(cell, withNumbersFrom: ticket)
+            if let winTicket = _winningTicket {
+                winTicket.compareForWinnings(ticket: ticket)
+            }
+            configureLabelText(forThis: cell, withNumbersFrom: ticket)
             
             //I need to move this to the ticket class
             if ticket.isWinner {
@@ -65,12 +79,18 @@ class JackpotTableViewController: UITableViewController {
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "WinningTicketCell", for: indexPath)
-        configureLabelText(cell, withNumbersFrom: _winningTicket, frontText: "The winning ticket: ")
-        return cell
+        if let winTicket = _winningTicket {
+            configureLabelText(forThis: cell, withNumbersFrom: winTicket, frontText: "The winning ticket: ")
+            return cell
+        } else {
+            let label = cell.viewWithTag(1001) as! UILabel
+            label.text = "Enter winning ticket numbers!"
+            return cell
+        }
     }
     
     // MARK:-
-    func configureLabelText(_ cell: UITableViewCell, withNumbersFrom ticket: Ticket, frontText: String = "") {
+    func configureLabelText(forThis cell: UITableViewCell, withNumbersFrom ticket: Ticket, frontText: String = "") {
         let label = cell.viewWithTag(1001) as! UILabel
         label.text = frontText + ticket.description
     }

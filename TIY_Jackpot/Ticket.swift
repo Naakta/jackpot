@@ -1,6 +1,6 @@
 //
 //  Ticket.swift
-//  TIY_Jackpot
+//  Jackpot
 //
 //  Created by Doug Wagner on 3/20/18.
 //  Copyright © 2018 Doug Wagner. All rights reserved.
@@ -28,6 +28,23 @@ class Ticket {
                 numbers.insert(newPick)
             }
         } while numbers.count < 6
+        
+        let numArray = numbers.sorted()
+        for number in numArray {
+            description += "\(number) "
+        }
+    }
+    
+    init?(ticketNumbers: Set<Int>) {
+        for pick in ticketNumbers {
+            if !numbers.contains(pick) {
+                numbers.insert(pick)
+            }
+        }
+        
+        if numbers.count < 6 {
+            return nil
+        }
         
         let numArray = numbers.sorted()
         for number in numArray {
