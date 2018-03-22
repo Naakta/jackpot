@@ -11,6 +11,7 @@ import UIKit
 
 protocol winningTicketDelegate {
     func doneButtonPressed(winningTicket ticket: Ticket)
+    func userDidCancel()
 }
 class WinningTicketViewController: UIViewController, UITextFieldDelegate {
     var delegate: winningTicketDelegate?
@@ -34,17 +35,11 @@ class WinningTicketViewController: UIViewController, UITextFieldDelegate {
             } else {
                 showMyAlert()
             }
-            
-            
-            
-                            
-
-//            if ticket.numbers.count < 6 {
-//                showMyAlert()
-//            } else {
-//                delegate?.doneButtonPressed(winningTicket: ticket)
-//            }
         }
+    }
+    
+    @IBAction func didCancel() {
+        delegate?.userDidCancel()
     }
     
     func checkProperTicket() -> Bool {

@@ -23,15 +23,14 @@ class JackpotTableViewController: UITableViewController, winningTicketDelegate {
         tableView.reloadData()
     }
     
+    func userDidCancel() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "My Tickets"
         super.viewDidLoad()
-        
-        // Debugging/Teting
-//        for _ in 0..<100 {
-//            _tickets.append(Ticket())
-//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

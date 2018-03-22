@@ -13,7 +13,7 @@
         <!--My Tickets-->
         <scene sceneID="IIO-kz-nVJ">
             <objects>
-                <tableViewController id="SPp-A3-BwU" customClass="JackpotTableViewController" customModule="TIY_Jackpot" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="SPp-A3-BwU" customClass="JackpotTableViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ls5-Bt-aZR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +93,7 @@
         <!--Winning Ticket View Controller-->
         <scene sceneID="3YM-9p-J4z">
             <objects>
-                <viewController id="Lp1-mi-aMu" customClass="WinningTicketViewController" customModule="TIY_Jackpot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lp1-mi-aMu" customClass="WinningTicketViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ysx-Ea-NU3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,78 +110,83 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FyY-ob-3Y9">
-                                <rect key="frame" x="116" y="128" width="40" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="P8e-Ur-Eqt"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Lp1-mi-aMu" id="izA-5e-N39"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BF2-89-Rqn">
-                                <rect key="frame" x="68" y="128" width="40" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="QLw-p1-mLM"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Lp1-mi-aMu" id="GjN-Zm-DJq"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-JO-52N">
-                                <rect key="frame" x="164" y="128" width="40" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="t7w-I7-vH3"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Lp1-mi-aMu" id="jL4-Le-Mk7"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ED0-Vi-sSq">
-                                <rect key="frame" x="20" y="128" width="40" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="cPn-N5-ORU"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Lp1-mi-aMu" id="ubF-lh-Osz"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EaL-z8-sj7">
-                                <rect key="frame" x="260" y="128" width="40" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="RRC-nS-lE5"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Lp1-mi-aMu" id="0Gn-8z-NM9"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bzw-ih-YS7">
-                                <rect key="frame" x="212" y="128" width="40" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="gjl-ko-AVb"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Lp1-mi-aMu" id="crQ-ia-mhQ"/>
-                                </connections>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="po3-YF-MAm">
+                                <rect key="frame" x="16" y="128" width="343" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ED0-Vi-sSq">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="cPn-N5-ORU"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Lp1-mi-aMu" id="ubF-lh-Osz"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BF2-89-Rqn">
+                                        <rect key="frame" x="60.5" y="0.0" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="QLw-p1-mLM"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Lp1-mi-aMu" id="GjN-Zm-DJq"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FyY-ob-3Y9">
+                                        <rect key="frame" x="121" y="0.0" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="P8e-Ur-Eqt"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Lp1-mi-aMu" id="izA-5e-N39"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-JO-52N">
+                                        <rect key="frame" x="182" y="0.0" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="t7w-I7-vH3"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Lp1-mi-aMu" id="jL4-Le-Mk7"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bzw-ih-YS7">
+                                        <rect key="frame" x="242.5" y="0.0" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="gjl-ko-AVb"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Lp1-mi-aMu" id="crQ-ia-mhQ"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EaL-z8-sj7">
+                                        <rect key="frame" x="303" y="0.0" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="RRC-nS-lE5"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Lp1-mi-aMu" id="0Gn-8z-NM9"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Y4-nJ-3if">
                                 <rect key="frame" x="162.5" y="173" width="50" height="30"/>
                                 <constraints>
@@ -198,29 +203,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eae-Ac-tSs">
+                                <rect key="frame" x="163.5" y="211" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="didCancel" destination="Lp1-mi-aMu" eventType="touchUpInside" id="dGr-b7-yCi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dcm-JO-52N" firstAttribute="centerY" secondItem="Bzw-ih-YS7" secondAttribute="centerY" id="4kT-Fc-sqj"/>
                             <constraint firstItem="k8c-GI-c4u" firstAttribute="top" secondItem="isb-1m-HfL" secondAttribute="top" constant="75" id="5gz-Vx-PvF"/>
-                            <constraint firstItem="ED0-Vi-sSq" firstAttribute="centerY" secondItem="BF2-89-Rqn" secondAttribute="centerY" id="8h6-UD-inB"/>
-                            <constraint firstItem="FyY-ob-3Y9" firstAttribute="centerY" secondItem="dcm-JO-52N" secondAttribute="centerY" id="8we-ad-NJg"/>
-                            <constraint firstItem="BF2-89-Rqn" firstAttribute="leading" secondItem="ED0-Vi-sSq" secondAttribute="trailing" constant="8" id="IIH-UQ-Kry"/>
                             <constraint firstItem="k8c-GI-c4u" firstAttribute="leading" secondItem="isb-1m-HfL" secondAttribute="leading" constant="20" id="JBX-Sz-yUQ"/>
-                            <constraint firstItem="FyY-ob-3Y9" firstAttribute="leading" secondItem="BF2-89-Rqn" secondAttribute="trailing" constant="8" id="L7M-lc-v5i"/>
-                            <constraint firstItem="Bzw-ih-YS7" firstAttribute="leading" secondItem="dcm-JO-52N" secondAttribute="trailing" constant="8" id="LYy-sO-fXq"/>
+                            <constraint firstItem="7Y4-nJ-3if" firstAttribute="top" secondItem="po3-YF-MAm" secondAttribute="bottom" constant="15" id="Moq-ll-RJE"/>
                             <constraint firstItem="Ioi-30-zIt" firstAttribute="top" secondItem="b5m-Zf-Fbt" secondAttribute="bottom" constant="8" id="Oib-PL-bLJ"/>
-                            <constraint firstItem="dcm-JO-52N" firstAttribute="leading" secondItem="FyY-ob-3Y9" secondAttribute="trailing" constant="8" id="Pj9-KL-1VB"/>
-                            <constraint firstItem="Bzw-ih-YS7" firstAttribute="centerY" secondItem="EaL-z8-sj7" secondAttribute="centerY" id="Q9B-j9-Tqt"/>
-                            <constraint firstItem="EaL-z8-sj7" firstAttribute="leading" secondItem="Bzw-ih-YS7" secondAttribute="trailing" constant="8" id="S0U-Za-Cwf"/>
-                            <constraint firstItem="ED0-Vi-sSq" firstAttribute="top" secondItem="k8c-GI-c4u" secondAttribute="bottom" constant="15" id="ZIS-Mo-UbQ"/>
+                            <constraint firstItem="po3-YF-MAm" firstAttribute="centerX" secondItem="ysx-Ea-NU3" secondAttribute="centerX" id="PQ1-24-yyI"/>
+                            <constraint firstItem="isb-1m-HfL" firstAttribute="trailing" secondItem="po3-YF-MAm" secondAttribute="trailing" constant="16" id="TCP-RS-Tzf"/>
                             <constraint firstItem="Ioi-30-zIt" firstAttribute="leading" secondItem="b5m-Zf-Fbt" secondAttribute="leading" id="ZYx-O8-aD2"/>
                             <constraint firstItem="k8c-GI-c4u" firstAttribute="leading" secondItem="b5m-Zf-Fbt" secondAttribute="leading" id="bhI-mf-fuO"/>
-                            <constraint firstItem="7Y4-nJ-3if" firstAttribute="top" secondItem="dcm-JO-52N" secondAttribute="bottom" constant="15" id="eeQ-8H-P37"/>
-                            <constraint firstItem="ED0-Vi-sSq" firstAttribute="leading" secondItem="k8c-GI-c4u" secondAttribute="leading" id="ita-Vd-AcK"/>
+                            <constraint firstItem="Eae-Ac-tSs" firstAttribute="centerX" secondItem="ysx-Ea-NU3" secondAttribute="centerX" id="fCV-It-n7J"/>
                             <constraint firstItem="7Y4-nJ-3if" firstAttribute="centerX" secondItem="ysx-Ea-NU3" secondAttribute="centerX" id="kPF-Mi-kH6"/>
+                            <constraint firstItem="Eae-Ac-tSs" firstAttribute="top" secondItem="7Y4-nJ-3if" secondAttribute="bottom" constant="8" id="kSj-h7-NdF"/>
                             <constraint firstItem="k8c-GI-c4u" firstAttribute="top" secondItem="Ioi-30-zIt" secondAttribute="bottom" constant="3" id="mKT-zg-Gzd"/>
-                            <constraint firstItem="BF2-89-Rqn" firstAttribute="centerY" secondItem="FyY-ob-3Y9" secondAttribute="centerY" id="uG9-7k-m5O"/>
+                            <constraint firstItem="po3-YF-MAm" firstAttribute="top" secondItem="k8c-GI-c4u" secondAttribute="bottom" constant="15" id="qqx-6I-MoX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="isb-1m-HfL"/>
                     </view>

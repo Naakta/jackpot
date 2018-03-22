@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		3F5720F8206141E8008B27AD /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
-		3F7272A32060A95300AC97B9 /* TIY_Jackpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TIY_Jackpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7272A32060A95300AC97B9 /* Jackpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jackpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7272A62060A95300AC97B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7272AB2060A95300AC97B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F7272AD2060A95300AC97B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		3F72729A2060A95300AC97B9 = {
 			isa = PBXGroup;
 			children = (
-				3F7272A52060A95300AC97B9 /* TIY_Jackpot */,
+				3F7272A52060A95300AC97B9 /* Jackpot */,
 				3F7272A42060A95300AC97B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		3F7272A42060A95300AC97B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F7272A32060A95300AC97B9 /* TIY_Jackpot.app */,
+				3F7272A32060A95300AC97B9 /* Jackpot.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F7272A52060A95300AC97B9 /* TIY_Jackpot */ = {
+		3F7272A52060A95300AC97B9 /* Jackpot */ = {
 			isa = PBXGroup;
 			children = (
 				3F7272B82060A99C00AC97B9 /* JackpotTableViewController.swift */,
@@ -67,15 +67,15 @@
 				3F7272A62060A95300AC97B9 /* AppDelegate.swift */,
 				3F7272B22060A95300AC97B9 /* Info.plist */,
 			);
-			path = TIY_Jackpot;
+			path = Jackpot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F7272A22060A95300AC97B9 /* TIY_Jackpot */ = {
+		3F7272A22060A95300AC97B9 /* Jackpot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F7272B52060A95300AC97B9 /* Build configuration list for PBXNativeTarget "TIY_Jackpot" */;
+			buildConfigurationList = 3F7272B52060A95300AC97B9 /* Build configuration list for PBXNativeTarget "Jackpot" */;
 			buildPhases = (
 				3F72729F2060A95300AC97B9 /* Sources */,
 				3F7272A02060A95300AC97B9 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = TIY_Jackpot;
+			name = Jackpot;
 			productName = TIY_Jackpot;
-			productReference = 3F7272A32060A95300AC97B9 /* TIY_Jackpot.app */;
+			productReference = 3F7272A32060A95300AC97B9 /* Jackpot.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3F72729E2060A95300AC97B9 /* Build configuration list for PBXProject "TIY_Jackpot" */;
+			buildConfigurationList = 3F72729E2060A95300AC97B9 /* Build configuration list for PBXProject "Jackpot" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F7272A22060A95300AC97B9 /* TIY_Jackpot */,
+				3F7272A22060A95300AC97B9 /* Jackpot */,
 			);
 		};
 /* End PBXProject section */
@@ -284,9 +284,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVL8JVA4Q4;
-				INFOPLIST_FILE = TIY_Jackpot/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Jackpot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Naakta.TIY-Jackpot";
+				PRODUCT_BUNDLE_IDENTIFIER = Naakta.Jackpot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,9 +299,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVL8JVA4Q4;
-				INFOPLIST_FILE = TIY_Jackpot/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Jackpot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Naakta.TIY-Jackpot";
+				PRODUCT_BUNDLE_IDENTIFIER = Naakta.Jackpot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,7 +311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F72729E2060A95300AC97B9 /* Build configuration list for PBXProject "TIY_Jackpot" */ = {
+		3F72729E2060A95300AC97B9 /* Build configuration list for PBXProject "Jackpot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F7272B32060A95300AC97B9 /* Debug */,
@@ -320,7 +320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F7272B52060A95300AC97B9 /* Build configuration list for PBXNativeTarget "TIY_Jackpot" */ = {
+		3F7272B52060A95300AC97B9 /* Build configuration list for PBXNativeTarget "Jackpot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F7272B62060A95300AC97B9 /* Debug */,
