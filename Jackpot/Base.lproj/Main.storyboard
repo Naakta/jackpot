@@ -194,7 +194,7 @@
                                 </constraints>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <action selector="doneButton" destination="Lp1-mi-aMu" eventType="touchUpInside" id="19x-iL-IiD"/>
+                                    <action selector="doneButtonPressed" destination="Lp1-mi-aMu" eventType="touchUpInside" id="enT-Yi-6Vb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Each number can only appear once" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8c-GI-c4u">

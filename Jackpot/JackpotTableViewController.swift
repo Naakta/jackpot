@@ -9,14 +9,19 @@
 import UIKit
 
 class JackpotTableViewController: UITableViewController, winningTicketDelegate {
+    
     var _tickets = [Ticket]()
     var _winningTicket: Ticket?
     
+    
+    // MARK: - Action Handlers
     @IBAction func addTicket() {
         _tickets.append(Ticket())
         tableView.reloadData()
     }
     
+    
+    // MARK:- Delegate Methods
     func doneButtonPressed(winningTicket ticket: Ticket) {
         _winningTicket = ticket
         dismiss(animated: true, completion: nil)
@@ -27,6 +32,8 @@ class JackpotTableViewController: UITableViewController, winningTicketDelegate {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    // MARK:-
     override func viewDidLoad() {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "My Tickets"
@@ -73,7 +80,7 @@ class JackpotTableViewController: UITableViewController, winningTicketDelegate {
                 let label = cell.viewWithTag(1002) as! UILabel
                 label.text = ""
             }
-            cell.backgroundColor = _tickets[indexPath.row].myColor
+            cell.backgroundColor = ticket.myColor
             return cell
         }
         
@@ -93,5 +100,4 @@ class JackpotTableViewController: UITableViewController, winningTicketDelegate {
         let label = cell.viewWithTag(1001) as! UILabel
         label.text = frontText + ticket.description
     }
-
 }

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class Ticket {
+    
     var numbers = Set<Int>()
     var myColor = UIColor.clear
     var winnings: Int?
@@ -17,6 +18,8 @@ class Ticket {
     var description = ""
     
     // MARK:-
+    
+    // Init method for quick pick tickets. Randomly generates 6 unique numbers
     init() {
         let maxRange: UInt32 = 53
         numbers.insert(Int(arc4random_uniform(maxRange)+1))
@@ -35,6 +38,9 @@ class Ticket {
         }
     }
     
+    // Init method for the WinningTicketVC - collects values from text fields and attempts to create a ticket
+    // Couldn't return nil within the for loop (it wouldn't pop out of the init, would only act as a continue)
+    // init will return nil if the numbers in the text fields are not unique (there are dupes)
     init?(ticketNumbers: Set<Int>) {
         for pick in ticketNumbers {
             if !numbers.contains(pick) {
@@ -52,6 +58,7 @@ class Ticket {
         }
     }
     
+    // Method is called and sets different properties within the ticket for VC to use
     func compareForWinnings(ticket: Ticket) {
         var count = 0
         for num in ticket.numbers {
@@ -60,11 +67,13 @@ class Ticket {
             }
         }
         
+        // Sets background color to green if ticket is a winner
         if count > 2 {
             ticket.myColor = UIColor(red: 192/255, green: 255/255, blue: 158/255, alpha: 1)
             ticket.isWinner = true
         }
 
+        // Sets just how much each ticket is worth
         if count == 3 {
             ticket.winnings = 1
         } else if count == 4 {
@@ -77,49 +86,5 @@ class Ticket {
     }
 }
 
-    
-    
-    // First solution - using an array instead of a set
-    // Keeping for possible future use
-    
-//    var _numbers = [Int]()
-//    init() {
-//        let maxRange: UInt32 = 12
-//        _numbers.append(Int(arc4random_uniform(maxRange)+1))
-//        for i in 1...5 {
-//            _numbers.append(Int(arc4random_uniform(maxRange)+1))
-//            while checkDuplicateNumbers() == false {
-//                _numbers[i] = Int(arc4random_uniform(maxRange)+1)
-//            }
-//        }
-//    }
-//
-//    func checkDuplicateNumbers() -> Bool {
-//        for i in 0..._numbers.count-1 {
-//            if i == _numbers.count-1 {
-//                return true
-//            }
-//            for j in i+1..._numbers.count-1 {
-//                if _numbers[i] == _numbers[j] {
-//                    return false
-//                }
-//            }
-//        }
-//        return true
-//    }
-    
-//    func compareTicketsForWinnings(secondTicket: Ticket) -> Int {
-//        var count = 0
-//        
-//        let sortedTIcket = secondTicket._numbers.sorted()
-//        print(sortedTIcket)
-//        for i in 0...5 {
-//            for j in 0...5 {
-//                if self._numbers[i] == secondTicket._numbers[j] {
-//                    count += 1
-//                }
-//            }
-//        }
-//        return count
-//    }
+
 
